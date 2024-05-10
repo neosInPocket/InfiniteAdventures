@@ -33,14 +33,14 @@ public class StartDiscipline : MonoBehaviour
 		gameObject.SetActive(true);
 		OnDisciplinePassed = onPassed;
 		Touch.onFingerDown += SpaceNinja;
-		disciplineText.text = "WELCOME TO INFINITE ADVENTURES!";
+		disciplineText.text = "WELCOME TO ZEUS MYTHS!";
 	}
 
 	private void SpaceNinja(Finger finger)
 	{
 		Touch.onFingerDown -= SpaceNinja;
 		Touch.onFingerDown += DaggerFly;
-		disciplineText.text = "BECOME A REAL SPACE NINJA! TO DO THIS, YOU SHOULD LEARN HOW TO HANDLE YOUR DAGGER";
+		disciplineText.text = "BECOME A REAL OLYMP NINJA! TO DO THIS, YOU SHOULD LEARN HOW TO HANDLE YOUR DAGGER";
 		gamePointer.SetTrigger("newForm");
 	}
 
