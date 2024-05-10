@@ -20,12 +20,12 @@ public class LevelStatsCreator
 
 	public int CreateLevelReward(int level)
 	{
-		return 10;
+		return (int)(10f * Mathf.Sqrt(level + 1)); ;
 	}
 
 	public int CreateLevelMaxProgress(int level)
 	{
-		return 10;
+		return (int)(3f * Mathf.Sqrt(level + 1)); ;
 	}
 
 	public void IncreaseScore(int amount)

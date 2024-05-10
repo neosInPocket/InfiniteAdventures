@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using Finger = UnityEngine.InputSystem.EnhancedTouch.Finger;
+using System;
 
 public class IClickStartGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private Action waitEndAction;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void StartWaitForGame(Action onWaitEndAction)
+	{
+		Touch.onFingerDown += OnWaitEnd;
+		waitEndAction = onWaitEndAction;
+		gameObject.SetActive(true);
+	}
+
+	private void OnWaitEnd(Finger finger)
+	{
+		Touch.onFingerDown -= OnWaitEnd;
+		waitEndAction();
+		gameObject.SetActive(false);
+	}
+
+	private void OnDestroy()
+	{
+		Touch.onFingerDown -= OnWaitEnd;
+	}
 }

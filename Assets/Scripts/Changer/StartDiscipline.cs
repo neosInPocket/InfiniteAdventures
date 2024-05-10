@@ -72,7 +72,7 @@ public class StartDiscipline : MonoBehaviour
 	{
 		Touch.onFingerDown -= GoodLuck;
 		Touch.onFingerDown += DisciplineCompleted;
-		disciplineText.text = "GOOD LUCK!";
+		disciplineText.text = "BE AWARE OF RED ASTEROIDS: IF YOU HIT ONE, YOU WILL LOSE. GOOD LUCK!";
 		gamePointer.SetTrigger("newForm");
 	}
 

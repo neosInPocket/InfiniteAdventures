@@ -24,4 +24,9 @@ public class LevelProgressInspector : MonoBehaviour
 		numericProgress.text = $"{levelStatsCreator.Score}/{levelStatsCreator.MaxScore}";
 		lineProgress.fillAmount = levelStatsCreator.CurrentProgress;
 	}
+
+	private void OnDestroy()
+	{
+		levelStatsCreator.OnScoreChanged -= SetInfo;
+	}
 }

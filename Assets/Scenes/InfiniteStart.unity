@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: gives more level time
+  m_text: increases dagger spin speed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
   m_sharedMaterial: {fileID: -6594372093987426224, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 83.8
+  m_fontSize: 54.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: compass upgrade
+  m_text: spin speed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
   m_sharedMaterial: {fileID: -6594372093987426224, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 89.1
+  m_fontSize: 118.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f25cfeb871f05724c887894e945937eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b136df3adb066f4888f154f2c78de11, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2895,7 +2895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: compass upgrade
+  m_text: THROW SPEED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
   m_sharedMaterial: {fileID: -6594372093987426224, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
@@ -2922,7 +2922,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 89.1
+  m_fontSize: 118.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3648,7 +3648,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bbc15299f021c6b4091098026b6b3a4d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5198,13 +5198,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infiniteProgress: 1
-  infiniteDiamonds: 780
+  infiniteDiamonds: 0
   infiniteFirst: 0
   infiniteSecond: 0
   infiniteEffects: 1
   infiniteMusic: 1
   startDiscipline: 1
-  clearStartPreferences: 1
+  clearStartPreferences: 0
 --- !u!4 &1907480702
 Transform:
   m_ObjectHideFlags: 0
@@ -6008,7 +6008,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: gives more level time
+  m_text: increases dagger throw force
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
   m_sharedMaterial: {fileID: -6594372093987426224, guid: 98bd4540d5f814a4a90d76fbf9fb23d7, type: 2}
@@ -6035,7 +6035,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 83.8
+  m_fontSize: 54.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

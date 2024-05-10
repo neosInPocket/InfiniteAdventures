@@ -1,18 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BalloonSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] private MovingBalloon prefab;
+	[SerializeField] private Vector2 differentTimes;
+	[SerializeField] private DeviceEdges deviceEdges;
+	[SerializeField] private RetentionScript retentionScript;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void StartBalloonSpawn(bool value)
+	{
+		if (value)
+		{
+			StartCoroutine(BalloonSpawn());
+		}
+		else
+		{
+			StopAllCoroutines();
+		}
+	}
+
+	public IEnumerator BalloonSpawn()
+	{
+		var spawnPosition = new Vector2(0, deviceEdges.Size.y);
+		var instance = Instantiate(prefab, spawnPosition, Quaternion.identity, transform);
+		instance.SetAllInformation(deviceEdges);
+		instance.source.enabled = retentionScript.InfiniteEffects;
+		yield return new WaitForSeconds(Random.Range(differentTimes.x, differentTimes.y));
+		StartCoroutine(BalloonSpawn());
+	}
 }

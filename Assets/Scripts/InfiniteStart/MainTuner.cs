@@ -1,10 +1,11 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainTuner : MonoBehaviour
 {
 	[SerializeField] public AudioSource tunerHolder;
-	[SerializeField] public RetentionScript retentionScript;
+	public RetentionScript retentionScript;
 
 	private void Awake()
 	{
@@ -22,6 +23,14 @@ public class MainTuner : MonoBehaviour
 			var foundTuner = tuners.FirstOrDefault(x => x.gameObject.scene.name != "DontDestroyOnLoad");
 			Destroy(foundTuner.gameObject);
 		}
+
+		SceneManager.sceneLoaded += FindRetention;
+	}
+
+	public void FindRetention(Scene scene, LoadSceneMode mode)
+	{
+		Debug.Log("loaded scene " + scene.name);
+		retentionScript = GameObject.FindObjectOfType<RetentionScript>();
 	}
 
 	private void Start()

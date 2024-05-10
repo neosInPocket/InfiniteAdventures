@@ -37,6 +37,7 @@ public class UpgradeCase : MonoBehaviour
 		{
 			normalText.text = "PURCHASED";
 			normalText.gameObject.SetActive(true);
+			normalText.color = Color.green;
 			restrictedText.gameObject.SetActive(false);
 			mainButton.interactable = false;
 		}
@@ -48,6 +49,7 @@ public class UpgradeCase : MonoBehaviour
 				normalText.gameObject.SetActive(true);
 				restrictedText.gameObject.SetActive(false);
 				mainButton.interactable = true;
+				normalText.color = Color.white;
 			}
 			else
 			{
